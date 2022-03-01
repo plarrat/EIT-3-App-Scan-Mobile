@@ -51,7 +51,15 @@ export default function App() {
   }
 
   const displayProduits = produits.map((produit, indice) => {
-    return <Produit key={indice} produit={produit} />
+    return (
+      <Produit
+        key={indice}
+        indice={indice}
+        produit={produit}
+        produits={produits}
+        setProduits={setProduits}
+      />
+    )
   })
   return (
     <SafeAreaView style={styles.container}>
