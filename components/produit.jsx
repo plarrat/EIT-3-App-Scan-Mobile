@@ -1,19 +1,19 @@
 import { Text, Card, Button, Icon } from "react-native-elements"
-export default function Produit() {
+export default function Produit(props) {
+  // const produit = props.produit
+  const { produit } = props
+
   return (
     <Card>
-      <Card.Title>Titre</Card.Title>
+      <Card.Title>{produit.marque}</Card.Title>
       <Card.Divider />
       <Card.Image
         style={{ padding: 0 }}
         source={{
-          uri: "https://awildgeographer.files.wordpress.com/2015/02/john_muir_glacier.jpg",
+          uri: produit.image,
         }}
       />
-      <Text style={{ marginBottom: 10 }}>
-        The idea with React Native Elements is more about component structure
-        than actual design.
-      </Text>
+      <Text style={{ marginBottom: 10, marginTop: 10 }}>{produit.nom}</Text>
       <Button
         icon={
           <Icon name="delete" color="#ffffff" iconStyle={{ marginRight: 10 }} />
