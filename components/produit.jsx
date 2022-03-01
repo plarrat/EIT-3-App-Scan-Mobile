@@ -8,7 +8,7 @@ export default function Produit(props) {
       <Card.Title>{produit.marque}</Card.Title>
       <Card.Divider />
       <Card.Image
-        style={{ padding: 0 }}
+        style={{ padding: 0, width: 250 }}
         source={{
           uri: produit.image,
         }}
@@ -23,6 +23,7 @@ export default function Produit(props) {
           marginLeft: 0,
           marginRight: 0,
           marginBottom: 0,
+          backgroundColor: "rgba(214, 61, 57, 1)",
         }}
         title="Supprimer"
       />
